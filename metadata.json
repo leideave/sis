@@ -1,5 +1,5 @@
 {
-  "name": "Sistema de Cadastro ICPRO",
-  "description": "Sistema completo de cadastro de alunos e gestão financeira com controle de parcelas e relatórios.",
+  "name": "CENTRAL AGENDAMENTO ICPRO",
+  "description": "Sistema de agendamento em tempo real para colaboradores, central e administradores com relatórios e alertas.",
   "requestFramePermissions": []
 }

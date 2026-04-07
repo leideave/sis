@@ -1,0 +1,24 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isValidClient(data) {
+      return data.name is string && data.name.size() > 0 &&
+             data.phone is string && data.phone.size() > 0 &&
+             data.course is string && data.course.size() > 0 &&
+             data.scheduledAt is string &&
+             data.createdBy is string &&
+             data.createdAt is string;
+    }
+
+    match /clients/{clientId} {
+      // Permitir acesso pois o controle é feito via senha no App
+      allow read, write: if true;
+      allow delete: if false; 
+    }
+  }
+}

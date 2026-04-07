@@ -1,0 +1,33 @@
+{
+  "entities": {
+    "Client": {
+      "title": "Cliente",
+      "description": "Informações do cliente agendado",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Nome do cliente" },
+        "phone": { "type": "string", "description": "Telefone do cliente" },
+        "course": { "type": "string", "description": "Curso escolhido" },
+        "scheduledAt": { "type": "string", "format": "date-time", "description": "Data e hora do agendamento" },
+        "status": { 
+          "type": "string", 
+          "enum": ["pendente", "compareceu", "nao_compareceu", "inscreveu", "nao_fechou_matricula"],
+          "description": "Status do atendimento"
+        },
+        "observation": { "type": "string", "description": "Observações do atendimento" },
+        "createdBy": { "type": "string", "description": "ID ou nome do usuário que cadastrou" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Data de criação" },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Data de atualização" },
+        "deleted": { "type": "boolean", "description": "Se o registro foi excluído" },
+        "deletedAt": { "type": "string", "format": "date-time", "description": "Data da exclusão" }
+      },
+      "required": ["name", "phone", "course", "scheduledAt", "createdBy", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/clients/{clientId}": {
+      "schema": "Client",
+      "description": "Coleção de clientes agendados"
+    }
+  }
+}

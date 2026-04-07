@@ -1,12 +1,20 @@
-# Sistema de Cadastro ICPRO
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Sistema completo de gestão escolar e financeira com controle de parcelas e relatórios em tempo real.
+# Run and deploy your AI Studio app
 
-## Como rodar o projeto localmente
+This contains everything you need to run your app locally.
 
-**Pré-requisitos:** Node.js
+View your app in AI Studio: https://ai.studio/apps/c103c8b5-a942-4e1f-b344-704f347892c6
 
-1. Instale as dependências:
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
    `npm install`
-2. Inicie o servidor de desenvolvimento:
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
    `npm run dev`
